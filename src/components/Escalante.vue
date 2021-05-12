@@ -1,6 +1,6 @@
 <template>
   <div>
-    <audio id="myAudio">
+    <audio id="myAudio" preload>
       <source src="pan.mp3" type="audio/mpeg" />
       <source src="prd.mp3" type="audio/mpeg" />
       <source src="pri.mp3" type="audio/mpeg" />

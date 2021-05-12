@@ -15,7 +15,9 @@
             />
           </symbol>
         </svg>
-        <audio ref="player" src="chill_music.mp3" loop="loop" />
+        <audio ref="player" loop preload>
+          <source src="chill_music.mp3" type="audio/mpeg" />
+        </audio>
         <div
           class="chill-button"
           @click="changeStatus"
@@ -98,22 +100,18 @@ export default {
   },
   methods: {
     clickPan() {
-      console.log("PAN");
       this.phrase = phrases.PAN;
       this.$refs.canvasShow.onPlay(this.phrase);
     },
     clickPri() {
-      console.log("PRI");
       this.phrase = phrases.PRI;
       this.$refs.canvasShow.onPlay(this.phrase);
     },
     clickPrd() {
-      console.log("PRD");
       this.phrase = phrases.PRD;
       this.$refs.canvasShow.onPlay(this.phrase);
     },
     clickHarto() {
-      console.log("EstoyHarto");
       this.phrase = phrases.EstoyHarto;
       this.$refs.canvasShow.onPlay(this.phrase);
     },
@@ -289,6 +287,7 @@ export default {
   height: 4rem;
   cursor: pointer;
   margin-left: 57px;
+  margin-right: 1.5rem;
 }
 
 .chill-music {

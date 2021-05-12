@@ -3,8 +3,6 @@ import App from './App.vue'
 import router from './router'
 import AudioVisual from 'vue-audio-visual'
 
-import './assets/styles/index.css';
-
 Vue.use(AudioVisual)
 
 Vue.config.productionTip = false
