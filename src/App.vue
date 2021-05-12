@@ -1,14 +1,36 @@
 <template>
   <div id="app">
-    <router-view/>
+    <Home />
   </div>
 </template>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+<script>
+import Home from "./views/Home.vue";
 
-#app {
-  font-family: 'Montserrat', sans-serif;
+export default {
+  components: {
+    Home,
+  },
+};
+</script>
+
+<style>
+html,
+body,
+#app,
+canvas {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
 }
 
+#app {
+  position: absolute;
+  z-index: 2;
+}
+
+.glCanvas {
+  position: absolute;
+  width: auto !important;
+}
 </style>
